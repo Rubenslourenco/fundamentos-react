@@ -1,8 +1,10 @@
-function Tasks() {
+function Tasks(props) {
   return (
-    <div>
-      <h1>Tasks</h1>
-    </div>
+    <h1>
+      {props.tasks.map((task) => (
+        <p>{task.title}</p>
+      ))}
+    </h1>
   );
 }
 

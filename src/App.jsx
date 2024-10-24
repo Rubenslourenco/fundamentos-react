@@ -1,11 +1,13 @@
+import { useState } from "react";
+
 function App() {
-  let message = "Olá mundo!";
+  const [message, setMessage] = useState("Ola mundo");
   return (
     <div>
       <h1>{message}</h1>
       <button
         onClick={() => {
-          message = "Olá, fui clicado!!";
+          setMessage("Olá, fui clicado!!");
         }}
       >
         Mudar mensagem

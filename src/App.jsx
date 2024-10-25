@@ -6,21 +6,23 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      text: "Estudar programação",
-      day: "15 de julho ás 10:00",
-      remider: true,
+      title: "Estudar programação",
+      description:
+        "Estudar programação para se tornar um desenvolvedor full stack",
+      isCompleted: false,
     },
     {
       id: 2,
-      text: "Fazer compras",
-      day: "15 de julho ás 10:00",
-      remider: true,
+      title: "Estudar inglês",
+      description: "Estudar ingles para se tornar fluente",
+      isCompleted: false,
     },
     {
       id: 3,
-      text: "Ler um livro ",
-      day: "15 de julho ás 10:00",
-      remider: true,
+      title: "Estudar matemática",
+      description:
+        "Estudar matematica para se torna um desenvolvedor full stack",
+      isCompleted: false,
     },
   ]);
 
@@ -30,8 +32,8 @@ function App() {
         <h1 className="textl-3xl text-slate-100 font-bold text-center">
           Gerenciador de Tarefas
         </h1>
-        <AddTask />
         <Tasks tasks={tasks} />
+        <AddTask />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { v4 } from "uuid";
 import Title from "./components/Title";
 
 function App() {
+  //scacs
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );

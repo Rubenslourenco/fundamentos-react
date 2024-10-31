@@ -8,12 +8,14 @@ function App() {
     JSON.parse(localStorage.getItem("tasks")) || []
   );
 
+  //Armazenado dados no browser
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // buscando dados de uma api para o browser
   useEffect(() => {
-    //Chamar a API
+    //Chamar API
     const fetchTasks = async () => {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/todos?_limit=10",
@@ -22,7 +24,8 @@ function App() {
         }
       );
       const data = await response.json();
-      console.log(data);
+
+      setTasks(data);
     };
     fetchTasks();
   }, []);
